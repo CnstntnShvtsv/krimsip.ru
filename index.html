@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Крым СИП Строй</title>
+
+    <meta name="description" content="...">
+    <meta name="keywords" content="...">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Крым СИП Строй.">
+    <meta property="og:url" content="https://krimsip.ru">
+    <meta property="og:description" content="...">
+    <meta property="og:image" content="assets/images/og-preview.jpg">
+    <meta property="og:type" content="website">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="assets/favicons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="assets/favicons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/favicons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/favicons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/favicons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/favicons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/favicons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/favicons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/favicons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/favicons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicons/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="assets/favicons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="shortcut icon" type="image/x-icon" href="assets/favicons/favicon.ico">
+
+    <!-- Preloading Styles -->
+    <link rel="preload" href="assets/styles/normalize.css" as="style">
+    <link rel="preload" href="assets/styles/bootstrap-grid.min.css" as="style">
+    <link rel="preload" href="assets/slick/slick-theme.css" as="style">
+    <link rel="preload" href="assets/slick/slick.css" as="style">
+    <link rel="preload" href="assets/aos/aos.css" as="style">
+    <link rel="preload" href="assets/jbox/jBox.all.min.css" as="style">
+    <link rel="preload" href="assets/styles/main.css" as="style">
+    <!-- Preloading Scripts -->
+    <link rel="preload" href="assets/scripts/jquery-3.6.0.min.js" as="script">
+    <link rel="preload" href="assets/slick/slick.min.js" as="script">
+    <link rel="preload" href="assets/aos/aos.js" as="script">
+    <link rel="preload" href="assets/jbox/jBox.all.min.js" as="script">
+    <link rel="preload" href="assets/scripts/main.js" as="script">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="assets/styles/normalize.css">
+    <link rel="stylesheet" href="assets/styles/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="assets/slick/slick-theme.css">
+    <link rel="stylesheet" href="assets/slick/slick.css">
+    <link rel="stylesheet" href="assets/aos/aos.css">
+    <link rel="stylesheet" href="assets/jbox/jBox.all.min.css">
+    <link rel="stylesheet" href="assets/styles/main.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400&display=swap">
+</head>
+
+<body>
+    <!-- [if lte IE 9]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com">upgrade your browser</a> to improve your experience and security.</p><![endif] -->
+
+    <!-- Preloader -->
+    <div id="preloader"></div>
+    <script>
+        var preloader = document.getElementById("preloader");
+
+        function fadeOutnojquery(el) {
+            el.style.opacity = 1;
+            var preloaderInterval = setInterval(function () {
+                el.style.opacity = el.style.opacity - 0.05;
+                if (el.style.opacity <= 0.05) {
+                    clearInterval(preloaderInterval);
+                    preloader.style.display = "none";
+                }
+            }, 16);
+        }
+        window.onload = function () {
+            setTimeout(function () {
+                fadeOutnojquery(preloader);
+            }, 500); // Preloader timeout 0.5s
+        };
+    </script>
+    <style>
+        #preloader {
+            display: block;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 99999;
+            width: 100%;
+            height: 100%;
+            background-color: #777777;
+            background-image: url("assets/images/preloader_tail-spin.svg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 64px;
+        }
+    </style>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <a class="header__logo" href="/">
+                <img class="logo" src="assets/images/logo.svg" alt="logo">
+                <p class="logo__text">
+                    <span class="text-accent">Крым</span>
+                    <span>сип</span>
+                    <span class="text-accent">строй</span>
+                </p>
+            </a>
+
+            <nav class="header__nav header__nav--desktop">
+                <ul class="navbar navbar--left">
+                    <li class="navbar__item">
+                        <a class="navbar__link" href="/">Главная</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a class="navbar__link" href="/">Услуги</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a class="navbar__link" href="/">Портфолио</a>
+                    </li>
+                </ul>
+
+                <ul class="navbar navbar--right">
+                    <li class="navbar__item">
+                        <a class="navbar__link" href="/">О компании</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a class="navbar__link" href="/">Отзывы</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a class="navbar__link" href="/">Новости</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <a class="header__toggler" role="button">
+                <span></span>
+            </a>
+        </div>
+    </header>
+
+    <nav class="header__nav header__nav--mobile">
+        <div class="container">
+            <ul class="navbar">
+                <li class="navbar__item">
+                    <a class="navbar__link" href="/">Главная</a>
+                </li>
+                <li class="navbar__item">
+                    <a class="navbar__link" href="/">Услуги</a>
+                </li>
+                <li class="navbar__item">
+                    <a class="navbar__link" href="/">Портфолио</a>
+                </li>
+                <li class="navbar__item">
+                    <a class="navbar__link" href="/">О компании</a>
+                </li>
+                <li class="navbar__item">
+                    <a class="navbar__link" href="/">Отзывы</a>
+                </li>
+                <li class="navbar__item">
+                    <a class="navbar__link" href="/">Новости</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Inner -->
+    <section class="inner main no-padding">
+        <div class="main__slider">
+            <div class="slide">
+                <img src="assets/images/bg_main-01.jpg" alt="slide">
+            </div>
+            <div class="slide">
+                <img src="assets/images/bg_main-02.jpg" alt="slide">
+            </div>
+            <div class="slide">
+                <img src="assets/images/bg_main-03.jpg" alt="slide">
+            </div>
+            <div class="slide">
+                <img src="assets/images/bg_main-04.jpg" alt="slide">
+            </div>
+            <div class="slide">
+                <img src="assets/images/bg_main-05.jpg" alt="slide">
+            </div>
+            <div class="slide">
+                <img src="assets/images/bg_main-06.jpg" alt="slide">
+            </div>
+            <div class="slide">
+                <img src="assets/images/bg_main-07.jpg" alt="slide">
+            </div>
+            <div class="slide">
+                <img src="assets/images/bg_main-08.jpg" alt="slide">
+            </div>
+            <div class="slide">
+                <img src="assets/images/bg_main-09.jpg" alt="slide">
+            </div>
+        </div>
+        <div class="inner__overlay">
+            <div class="container">
+                <div class="slide__info">
+                    <h1>Строительство домов из СИП-панелей<br>
+                        в Крыму и Севастополе по&nbsp;цене от&nbsp;<span class="price">9800</span>&nbsp;<span class="nowrap">руб/м<sup>2</sup></span></h1>
+                    <a href="/" role="button">Посмотреть портфолио &rarr;</a>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="main__slider-btns">
+            <a class="btn-prev" role="button"></a>
+            <a class="btn-next" role="button"></a>
+        </div> -->
+        <!-- <marquee class="marquee">По вопросам сотрудничества звоните: +7 978 073 43 63</marquee> -->
+    </section>
+
+    <!-- Services -->
+    <section class="services">
+        <div class="container">
+            <div class="section__title">
+                <h2>Стоимость и услуги</h2>
+                <h4>Обращаясь в нашу компанию, вы сможете самостоятельно выбрать подходящий вариант комплектации вашего будущего дома</h4>
+            </div>
+            <div class="row justify-content-center services__list">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="services__item">
+                        <div class="services__image">
+                            <img src="assets/images/icon_services-01.svg" alt="self-made" loading="lazy">
+                        </div>
+                        <div class="services__info">
+                            <h3>Строю сам</h3>
+                            <h4>От <span class="price">9800</span>&nbsp;руб/м<sup>2</sup></h4>
+                            <p>Набор панелей и пиломатериалов для самостоятельной сборки. Расходные материалы. Проект для самостоятельной сборки.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="services__item">
+                        <div class="services__image">
+                            <img src="assets/images/icon_services-02.svg" alt="standart" loading="lazy">
+                        </div>
+                        <div class="services__info">
+                            <h3>Стандарт</h3>
+                            <h4>От <span class="price">13800</span>&nbsp;руб/м<sup>2</sup></h4>
+                            <p>Изготовление домокомплекта, доставка, фундамент, кровля, сборка, окна, водосточная система, подшив свесов кровли.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="services__item">
+                        <div class="services__image">
+                            <img src="assets/images/icon_services-03.svg" alt="premium" loading="lazy">
+                        </div>
+                        <div class="services__info">
+                            <h3>Под ключ</h3>
+                            <h4>От <span class="price">17800</span>&nbsp;руб/м<sup>2</sup></h4>
+                            <p>Изготовление домокомплекта, доставка, фундамент, кровля, сборка, окна, водосточная система, подшив свесов кровли, внешняя отделка, разводка сантехники, разводка электрики, вентиляция.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio -->
+    <section class="portfolio">
+        <div class="container">
+            <div class="section__title">
+                <h2>Наши работы</h2>
+                <h4>Мы гордимся каждым выполненным проектом</h4>
+            </div>
+            <div class="row justify-content-center portfolio__list">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="portfolio__item">
+                        <img src="assets/images/portfolio-01.jpg" alt="preview" loading="lazy">
+                        <div class="portfolio__info">
+                            <h3>Ялтинское кольцо. 100&nbsp;м<sup>2</sup></h3>
+                            <a href="/">Смотреть проект</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="portfolio__item">
+                        <img src="assets/images/portfolio-02.jpg" alt="preview" loading="lazy">
+                        <div class="portfolio__info">
+                            <h3>Сапун-гора. 144&nbsp;м<sup>2</sup></h3>
+                            <a href="/">Смотреть проект</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="portfolio__item">
+                        <img src="assets/images/portfolio-03.jpg" alt="preview" loading="lazy">
+                        <div class="portfolio__info">
+                            <h3>Проект Гелиос. 85&nbsp;м<sup>2</sup></h3>
+                            <a href="/">Смотреть проект</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="button-wrapper">
+                <a class="button button--portfolio" href="/">Посмотреть все проекты &rarr;</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us -->
+    <section class="about-us">
+        <div class="container">
+            <div class="section__title">
+                <h2>Мы любим свое дело</h2>
+                <h4>и готовы воплотить ваши идеи в жизнь</h4>
+            </div>
+            <div class="row justify-content-center about-us__list">
+                <div class="col-12 col-md-6">
+                    <div class="about-us__item">
+                        <img src="assets/images/about-us-01.jpg" alt="photo" loading="lazy">
+                        <h3>Торговицкий Денис Владимирович</h3>
+                        <h5>Генеральный директор</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos laborum maiores numquam iure, reprehenderit ab modi voluptas cupiditate qui quidem consectetur aut impedit labore? Ipsa sequi alias molestiae ullam, laudantium dicta ex iste, veritatis possimus dolores, culpa tempora odit! Perspiciatis, cum consequuntur aliquam id incidunt maxime voluptas optio eveniet nesciunt.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="about-us__item">
+                        <img src="assets/images/about-us-02.jpg" alt="photo" loading="lazy">
+                        <h3>Казаченко Павел Петрович</h3>
+                        <h5>Коммерческий директор</h5>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores accusamus vitae, facere tempora blanditiis nemo iusto! Illum quibusdam ipsum perferendis dignissimos error voluptatibus laborum quia, ducimus distinctio dolorum ab facere minus modi natus! Commodi officiis voluptatibus reiciendis animi harum quod tenetur est, temporibus dolorem! Natus, quibusdam eum! Cupiditate nemo, sapiente facere reprehenderit vitae quas harum non commodi officia explicabo, nulla ad sint sunt. Consequatur, accusamus?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Us -->
+    <section class="contact-us">
+        <div class="container">
+            <div class="section__title">
+                <h2>Сделайте первый шаг!</h2>
+                <h4>Расскажите нам о своем будущем проекте</h4>
+            </div>
+            <div class="button-wrapper">
+                <a class="button button--contact-us" href="/">Заполнить форму &rarr;</a>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container"></div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row justify-content-center">
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <span class="back-to-top">
+        <a class="back-to-top__button" role="button">
+            <img src="assets/images/arrow-up.svg" alt="arrow up" loading="lazy">
+        </a>
+    </span>
+
+    <!-- Scripts -->
+    <script src="assets/scripts/jquery-3.6.0.min.js"></script>
+    <script src="assets/slick/slick.min.js"></script>
+    <script src="assets/aos/aos.js"></script>
+    <script src="assets/jbox/jBox.all.min.js"></script>
+    <script src="assets/scripts/main.js"></script>
+</body>
+
+</html>
