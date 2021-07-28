@@ -577,6 +577,13 @@ section {
     font-style: italic;
 }
 
+.about-us__post-scriptum {
+    text-align: center;
+    color: var(--color_mid);
+    font-style: italic;
+    font-weight: 300;
+}
+
 /* CONTACT US */
 .contact-us {
     background-color: var(--color_primary-dark);
@@ -589,6 +596,58 @@ section {
     color: var(--color_white);
 }
 
+
+/* CONTACT INFORMATION */
+.contact-information h4 {
+    display: inline-block;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.contact-information h4::after {
+    position: absolute;
+    left: 0;
+    bottom: -0.5rem;
+    content: "";
+    width: 100%;
+    height: 0.125rem;
+    background-color: var(--color_primary-default);
+}
+
+.contact-information p,
+.contact-information a {
+    font-weight: 300;
+    color: var(--color_mid);
+}
+
+.show-map {
+    display: block;
+    font-weight: 300;
+    color: var(--color_mid);
+    text-decoration: underline;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.show-map:hover {
+    color: var(--color_dark);
+}
+
+
+/* FOOTER */
+.footer {
+    background-color: var(--color_light);
+}
+
+.footer p {
+    text-align: center;
+    color: var(--color_mid);
+    padding: 3rem 0;
+}
+
+/* MEDIA QUERIES */
 @media only screen and (max-width: 1200px) {
 
     /* NAVBAR */
