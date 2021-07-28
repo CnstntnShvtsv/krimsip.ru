@@ -11,17 +11,23 @@ $(document).ready(function () {
 
 // Кнопка наверх:
 $(document).ready(function () {
-    var amountScrolled = 200;
+    // $(window).scroll(function () {
+    //     if ($(window).scrollTop() > 200) {
+    //         $('.back-to-top__button').fadeIn();
+    //     } else {
+    //         $('.back-to-top__button').fadeOut();
+    //     }
+    // });
 
     $(window).scroll(function () {
-        if ($(window).scrollTop() > amountScrolled) {
-            $('.back-to-top').fadeIn();
+        if ($(window).scrollTop() > 200) {
+            $('.back-to-top__button').addClass('show');
         } else {
-            $('.back-to-top').fadeOut();
+            $('.back-to-top__button').removeClass('show');
         }
     });
 
-    $('.back-to-top').click(function () {
+    $('.back-to-top__button').click(function () {
         $('html, body').animate({
             scrollTop: 0
         }, 500);
