@@ -23,6 +23,20 @@ $(window).resize(function () {
     }
 }).resize();
 
+// Загрузить все портфолио:
+$(document).ready(function () {
+    $('.button--page-portfolio').click(function () {
+        $(this).toggleClass('active');
+        if ($(this).hasClass('active')) {
+            $(this).text('Скрыть проекты');
+            $('.portfolio__hidden').removeClass('active');
+        } else {
+            $(this).text('Показать все проекты');
+            $('.portfolio__hidden').addClass('active');
+        }
+    });
+});
+
 // Slick Слайдер:
 $(document).ready(function () {
     $('.main__slider').slick({
