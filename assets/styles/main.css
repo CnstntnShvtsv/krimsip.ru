@@ -363,14 +363,46 @@ section {
     min-height: 25.25rem;
     height: calc(100vh - 5rem);
     max-height: 55.25rem;
-    position: relative;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-.main__slider .slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
+.main__slider .slide-01 {
+    background-image: url("../images/main-desktop/bg_main-01.gif");
+}
+
+.main__slider .slide-02 {
+    background-image: url("../images/main-desktop/bg_main-02.gif");
+}
+
+.main__slider .slide-03 {
+    background-image: url("../images/main-desktop/bg_main-03.gif");
+}
+
+.main__slider .slide-04 {
+    background-image: url("../images/main-desktop/bg_main-04.gif");
+}
+
+.main__slider .slide-05 {
+    background-image: url("../images/main-desktop/bg_main-05.gif");
+}
+
+.main__slider .slide-06 {
+    background-image: url("../images/main-desktop/bg_main-06.gif");
+}
+
+.main__slider .slide-07 {
+    background-image: url("../images/main-desktop/bg_main-07.gif");
+}
+
+.main__slider .slide-08 {
+    background-image: url("../images/main-desktop/bg_main-08.gif");
+}
+
+.main__slider .slide-09 {
+    background-image: url("../images/main-desktop/bg_main-09.gif");
 }
 
 .slide__info {
@@ -910,6 +942,42 @@ section {
     }
 
     /* INNER */
+    .main__slider .slide-01 {
+        background-image: url("../images/main-mobile/bg_main-01.gif");
+    }
+
+    .main__slider .slide-02 {
+        background-image: url("../images/main-mobile/bg_main-02.gif");
+    }
+
+    .main__slider .slide-03 {
+        background-image: url("../images/main-mobile/bg_main-03.gif");
+    }
+
+    .main__slider .slide-04 {
+        background-image: url("../images/main-mobile/bg_main-04.gif");
+    }
+
+    .main__slider .slide-05 {
+        background-image: url("../images/main-mobile/bg_main-05.gif");
+    }
+
+    .main__slider .slide-06 {
+        background-image: url("../images/main-mobile/bg_main-06.gif");
+    }
+
+    .main__slider .slide-07 {
+        background-image: url("../images/main-mobile/bg_main-07.gif");
+    }
+
+    .main__slider .slide-08 {
+        background-image: url("../images/main-mobile/bg_main-08.gif");
+    }
+
+    .main__slider .slide-09 {
+        background-image: url("../images/main-mobile/bg_main-09.gif");
+    }
+
     .slide__info {
         left: 0.75rem;
         right: 0.75rem;
