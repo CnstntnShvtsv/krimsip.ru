@@ -49,3 +49,21 @@ $(document).ready(function () {
         dots: true
     });
 });
+
+// Модальные окна:
+$(document).ready(function () {
+    $('.feedback__play').click(function () {
+        let videoId = $(this).attr('data-video');
+        $('.iframe__wrapper').fadeIn();
+        $('.iframe__wrapper iframe').attr('src', 'https://www.youtube.com/embed/' + videoId + '?autoplay=1');
+
+        $('body').css('overflow', 'hidden');
+    });
+
+    $('.iframe__wrapper, .feedback__close').click(function () {
+        $('.iframe__wrapper').fadeOut();
+        $('.iframe__wrapper iframe').attr('src', '');
+
+        $('body').css('overflow', 'auto');
+    });
+});
