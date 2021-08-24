@@ -67,3 +67,23 @@ $(document).ready(function () {
         $('body').css('overflow', 'auto');
     });
 });
+
+// MarQuiz (кнопка "Пройти опрос"):
+$(document).ready(function () {
+    $('.button--contact-us').click(function () {
+        $(this).toggleClass('active');
+        if ($(this).hasClass('active')) {
+            $('.quiz-wrapper').fadeIn();
+            $('body').css('overflow', 'hidden');
+        } else {
+            $('.quiz-wrapper').fadeOut();
+            $('body').css('overflow', 'auto');
+        }
+    });
+
+    $('.quiz-wrapper, quiz__close').click(function () {
+        $(this).fadeOut();
+        $('.button--contact-us').removeClass('active');
+        $('body').css('overflow', 'auto');
+    });
+});
