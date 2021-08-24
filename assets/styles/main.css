@@ -212,7 +212,7 @@ body .cbk-phone {
 
 .quiz__close {
     position: absolute;
-    top: 0.5rem;
+    top: -3rem;
     right: 0.5rem;
     /* background-color: var(--color_primary-dark, #ffa000); */
     background-color: var(--color_primary-default, #ffc107);
