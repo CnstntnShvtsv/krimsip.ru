@@ -1,8 +1,3 @@
-// AOS
-$(document).ready(function () {
-    AOS.init();
-});
-
 // jBox
 $(document).ready(function () {
     new jBox('Image');
@@ -52,8 +47,9 @@ $(document).ready(function () {
 
 // Модальные окна:
 $(document).ready(function () {
-    $('.feedback__play').click(function () {
-        let videoId = $(this).attr('data-video');
+    $('.feedback__item').click(function () {
+        let videoId = $(this).find('.feedback__play').attr('data-video');
+
         $('.iframe__wrapper').fadeIn();
         $('.iframe__wrapper iframe').attr('src', 'https://www.youtube.com/embed/' + videoId + '?autoplay=1');
 
@@ -70,18 +66,20 @@ $(document).ready(function () {
 
 // MarQuiz (кнопка "Пройти опрос"):
 $(document).ready(function () {
+    $('.quiz__inner iframe').find('.assistant-mobile__block').addClass('active');
+
     $('.button--contact-us').click(function () {
         $(this).toggleClass('active');
         if ($(this).hasClass('active')) {
-            $('.quiz-wrapper').fadeIn();
+            $('.quiz__wrapper').fadeIn();
             $('body').css('overflow', 'hidden');
         } else {
-            $('.quiz-wrapper').fadeOut();
+            $('.quiz__wrapper').fadeOut();
             $('body').css('overflow', 'auto');
         }
     });
 
-    $('.quiz-wrapper, quiz__close').click(function () {
+    $('.quiz__wrapper, quiz__close').click(function () {
         $(this).fadeOut();
         $('.button--contact-us').removeClass('active');
         $('body').css('overflow', 'auto');
